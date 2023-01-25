@@ -1,0 +1,117 @@
+.navbar{
+    text-align: right;
+    background-color: rgb(67, 67, 67);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+p{
+    text-align: center;
+    color: orange;
+    padding: 100px;
+    font-style: italic;
+    font-style: bold;
+}
+
+iframe{
+    display: block;
+    align-items: center;
+
+}
+.navlogo{
+    float: left;
+    padding-bottom: 2rem;
+
+}
+.welcome{
+    text-align: center;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1rem;
+}
+li {
+    text-decoration: none;
+    display: inline;
+    margin-right: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(165, 0, 0);
+    
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+    
+    color: rgb(255, 136, 0);
+}
+
+.navlogo{
+    width: 2em;
+    height: 2em;
+    padding: none;
+    text-align: left;
+
+}
+
+html{
+    min-height: 100%;
+    overscroll-behavior: none;
+    margin: 0;
+}
+.main-body{
+    background: url(../images/Background\ Test0001-0120.gif) rgb(0, 0, 0);
+    max-width: 100%;
+    max-height: 6000%;
+    min-height: 100%;
+
+}
+
+input{
+    display: block;
+}
+
+body{
+    background-color: rgb(40, 24, 24);
+}
+
+h1, h2, h3, h4, h5{
+    color: orange;
+    font-weight: bold;
+    font-style: italic;
+}
+
+html{
+    overscroll-behavior: contain;
+}
+
+.index-main{
+    background-color: rgba(119, 119, 119, 0.543);
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.index-second{
+    background-color: rgba(119, 119, 119, 0.543);
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.spotify-iframe{
+    display: flex;
+    justify-content: center;
+}
+
+.universe-div1{
+    background-color: grey;
+}
+
+.universe-body{
+    background: url(../images/WhatsApp\ Image\ 2022-12-19\ at\ 16.02.07.jpeg);
+    background-size: cover;
+}
+
