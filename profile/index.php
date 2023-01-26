@@ -24,6 +24,7 @@
                 <tr><th><i class="bi bi-person-vcard-fill"></i> Last name</th><td>Doe</td></tr>
                 <tr><th><i class="bi bi-gender-ambiguous"></i> Gender</th><td>Male</td></tr>
                 <tr><th><i class="bi bi-envelope"></i> Email</th><td>email@email.com</td></tr>
+                <h1>Github Test</h1>
             </table>
         </div>
     </div>
