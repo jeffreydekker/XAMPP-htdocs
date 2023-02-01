@@ -16,6 +16,7 @@
             <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
             <button class="mx-auto m-1 btn-sm btn btn-info text-white">Logout</button>
         </div>
+    </div>
         <div class="col-md-8">
             <div class="h1">User Profile</div>
             <table class="table table-striped">
@@ -24,7 +25,6 @@
                 <tr><th><i class="bi bi-person-vcard-fill"></i> Last name</th><td>Doe</td></tr>
                 <tr><th><i class="bi bi-gender-ambiguous"></i> Gender</th><td>Male</td></tr>
                 <tr><th><i class="bi bi-envelope"></i> Email</th><td>email@email.com</td></tr>
-                <h1>Github Test</h1>
             </table>
         </div>
     </div>

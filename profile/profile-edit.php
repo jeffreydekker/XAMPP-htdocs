@@ -9,34 +9,55 @@
     <title>Edit profile</title>
 </head>
 <body>
+
+
+
     <div class="row col-md-8 border rounded mx-auto mt-5 p-2 shadow-lg">
         <div class="col-md-4 text-center">
-            <img src="img/istockphoto-1309328823-170667a.jpg" class="img-fluid rounded-circle" style="width: 180px;height:180px;object-fit: cover;">
+            <img src="img/blank-profile-picture-973460__340.webp" class="js-image img-fluid rounded-circle" style="width: 180px;height:180px;object-fit: cover;">
             <div class="mb-3">
                 <label for="formFile" class="form-label">Upload image</label>
-                <input class="form-control" type="file" id="formFile">
+                <input onchange="display_image(this.file[0])" class="form-control" type="file" id="formFile">
             </div>
         </div>
+    </div>
         <div class="col-md-8">
-            <div class="h1">Edit Profile</div>
+            <div class="h2">Edit Profile</div>
             <table class="table table-striped">
-                <tr><th colspan="2">User details:</th><td></td></tr>
-                <tr><th><i class="bi bi-person-vcard-fill ">First name</th>
-                <td><input type="text" class="form-control" name="firstname" placeholder="Input first name here"></td></tr>
-                <tr><th><i class="bi bi-person-vcard-fill"></i> Last name</th>
-                <td><input type="text" class="form-control" name="lastname" placeholder="Input last name here"></td></tr>
-                <tr><th><i class="bi bi-gender-ambiguous"></i> Gender</th>
-                <td>Male</td></tr>
-                <tr><th><i class="bi bi-envelope"></i> Email</th>
-                <td><input type="text" class="form-control" name="email" placeholder="email@email.com"></td></tr>
+                <tr><th colspan="2">User details:</th></tr>
+                <tr><th><i class="bi bi-person-vcard-fill ">  First name</th>
+                    <td>
+                        <input type="text" class="form-control" name="firstname" placeholder="Input first name here">
+                    </td>
+                </tr>
+                <tr><th><i class="bi bi-person-vcard-fill"></i>  Last name</th>
+                    <td>
+                        <input type="text" class="form-control" name="lastname" placeholder="Input last name here">
+                    </td>
+                </tr>
+                <tr><th><i class="bi bi-gender-ambiguous"></i>  Gender</th>
+                <td><select class="form-select" aria-label="Default select example">
+                        <option selected value="">--Select Gender--</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select></td></tr>
+                <tr><th><i class="bi bi-envelope"></i>  Email</th>
+                <td><input type="text" class="form-control" name="email" placeholder="Email"></td></tr>
             </table>
-            <div>
+            <div class="p-2">
 
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </body>
 </html>
+
+<script>
+    function display_image(file)
+        {
+            var img = document.querySelector(".js-image");
+            img.src = URL.createObjectURL(file);
+        }
+</script>
