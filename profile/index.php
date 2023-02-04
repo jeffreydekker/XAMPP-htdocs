@@ -9,27 +9,30 @@
     <title>Profiles</title>
 </head>
 <body>
-    <div class="row col-md-8 border rounded mx-auto mt-5 p-2 shadow-lg">
-    <img src="img/istockphoto-1309328823-170667a.jpg" class="img-fluid rounded-circle" style="width: 180px;height:180px;object-fit: cover;">
+    <div class="row col-lg-8 border rounded mx-auto mt-5 p-2 shadow-lg">
         <div class="col-md-4 text-center">
-            <a href="profile-edit.php"><button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button></a>
-            <button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button>
-            <button class="mx-auto m-1 btn-sm btn btn-info text-white">Logout</button>
+            <img src="img/istockphoto-1309328823-170667a.jpg" class="img-fluid rounded" style="width: 180px;height:180px;object-fit: cover;" alt="Profile image">
+            <div>
+                <a href="profile-edit.php"><button class="mx-auto m-1 btn-sm btn btn-primary">Edit</button></a>
+                <a href="profile-delete.php"><button class="mx-auto m-1 btn-sm btn btn-warning text-white">Delete</button></a>
+                <a href="logout.php"><button class="mx-auto m-1 btn-sm btn btn-info text-white">Logout</button></a>
+            </div>
         </div>
-    </div>
         <div class="col-md-8">
-            <div class="h1">User Profile</div>
+            <div class="h2">User Profile</div>
             <table class="table table-striped">
-                <tr><th colspan="2">User details:</th><td></td></tr>
-                <tr><th><i class="bi bi-person-vcard-fill ">First name</th><td>John</td></tr>
-                <tr><th><i class="bi bi-person-vcard-fill"></i> Last name</th><td>Doe</td></tr>
-                <tr><th><i class="bi bi-gender-ambiguous"></i> Gender</th><td>Male</td></tr>
-                <tr><th><i class="bi bi-envelope"></i> Email</th><td>email@email.com</td></tr>
+                <tr><th colspan="2">User details:</th></tr>
+                <tr><th>First name</th><td>John</td></tr>
+                <tr><th>Last name</th><td>Doe</td></tr>
+                <tr><th>Gender</th><td>Male</td></tr>
+                <tr><th>Email</th><td>email@email.com</td></tr>
             </table>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+
+    </script>
   </body>
 </body>
 </html>

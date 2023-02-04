@@ -9,6 +9,22 @@
     <title>Login</title>
 </head>
 <body>
-    
+    <form method="post">
+        <div class="col-md-4 border rounded mx-auto mt-5 p-4 shadow">
+            <div class="h2">Login</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                <input name="email" type="text" class="form-control p-3" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+                <input name="password" type="password" class="form-control p-3" placeholder="Password" aria-label="email" aria-describedby="basic-addon1">
+            </div>
+            <button class="btn btn-primary col-12">Login</button>
+            <div class="m-2">
+                <a href="signup.php">Create Account</a>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
