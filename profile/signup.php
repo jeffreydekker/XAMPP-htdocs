@@ -16,17 +16,17 @@
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
                 <input name="email" type="text" class="form-control p-3" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
             </div>
-            <div><small></small></div>
+            <div><small class="text-danger js-error-email js-error"></small></div>
             <div class="input-group mt-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
                 <input name="firstname" type="text" class="form-control p-3" placeholder="First name" aria-label="email" aria-describedby="basic-addon1">
             </div>
-
+            <div><small class="text-danger js-error-firstname js-error"></small></div>
             <div class="input-group mt-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-square"></i></span>
                 <input name="lastname" type="text" class="form-control p-3" placeholder="Last name" aria-label="email" aria-describedby="basic-addon1">
             </div>
-
+            <div><small class="text-danger js-error-lastname js-error"></small></div>
             <div class="input-group mt-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-gender-ambiguous"></i></span>
                 <select class="form-select" name="gender" placeholder="Select Gender">
@@ -35,22 +35,21 @@
                     <option value="Female">Female</option>
                 </select>
             </div>
-
+            <div><small class="text-danger js-error-gender js-error"></small></div>
             <div class="input-group mt-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
                 <input name="password" type="password" class="form-control p-3" placeholder="Password" aria-label="email" aria-describedby="basic-addon1">
             </div>
-
+            <div><small class="text-danger js-error-password js-error"></small></div>
             <div class="input-group mt-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-repeat"></i></span>
                 <input name="repeat_password" type="password" class="form-control p-3" placeholder="Repeat Password" aria-label="email" aria-describedby="basic-addon1">
             </div>
-
+            <div><small class="text-danger js-error-password-repeat js-error"></small></div>
             <div class="progress mt-3 d-none" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                 <div class="progress-bar" style="width: 25%"></div>
             </div>
-
-            <button class="btn btn-primary col-12">Sign Up</button>
+            <button class="mt-3 btn btn-primary col-12">Sign Up</button>
             <div class="m-2">
                 <p>Already have an account? <a href="login.php">Log in here</a></p>
             </div>
@@ -110,6 +109,18 @@
                     alert("success");
                 } else {
                     // show error
+
+                    let error_inputs = document.querySelectorAll(".js-error");
+                    
+                    //empty all errors
+                    for (var i = 0; i < error_inputs.length; i++) {
+                        error_inputs[i].innerHTML = "";
+                    }
+
+                    // display errors 
+                    for (key in obj.success) {
+                        document.querySelector(".js-error" + key).innerHTML = obj.errors[key];
+                    }
                 }
             }
         };
