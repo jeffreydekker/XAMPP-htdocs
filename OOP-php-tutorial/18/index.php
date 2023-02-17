@@ -1,6 +1,6 @@
-<?php  
-include ' includes/class-autoload.inc.php';
+<?php
 
+include ' includes/class-autoload.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +13,8 @@ include ' includes/class-autoload.inc.php';
 </head>
 <body>
     <?php
-        $testObj = new Test();
-        echo $testObj->getUsers("Jeffrey", "Dekker");
+        $usersObj = new UsersView();
+        $usersObj->showUser()
     ?>
 </body>
 </html>
