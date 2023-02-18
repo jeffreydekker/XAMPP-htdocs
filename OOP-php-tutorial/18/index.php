@@ -13,8 +13,12 @@ include ' includes/class-autoload.inc.php';
 </head>
 <body>
     <?php
+
         $usersObj = new UsersView();
-        $usersObj->showUser()
+        $usersObj->showUser("John");
+    
+        $usersObj2 = new UsersContr();
+        $usersObj2->createUser("Jane", "Doe", "1834-05-11")
     ?>
 </body>
 </html>
