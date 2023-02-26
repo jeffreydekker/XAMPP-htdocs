@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["signup"])) {
 
     // grabbing the data from the signup form
     $uid = $_POST["uid"];
@@ -12,12 +12,12 @@ if (isset($_POST["submit"])) {
     include "../classes/dbh.classes.php";
     include "../classes/signup.classes.php";
     include "../classes/signup-controller.classes.php";
-    $signup = new SingupContr($uid, $pwd, $pwdRepeat, $email);
+    $signup = new SignupContr($uid, $pwd, $pwdRepeat, $email);
     
     // Running error handlers and user signup
     $signup->signupUser();
 
     // Going back to front page
-    header("location: ../index.php?error=none");
+    header('location:../index.php?error=none');
 
 }

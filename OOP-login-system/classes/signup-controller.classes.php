@@ -1,7 +1,6 @@
 <?php
 
-include 'signup.classes.php';
-class SingupContr extends Signup {
+class SignupContr extends Signup {
 
     private $uid;
     private $pwd;
@@ -37,11 +36,6 @@ class SingupContr extends Signup {
             exit;
         }
 
-        if ($this->pwdMatch() == false) {
-            header("location: ../index.php?error=passwordsdontmatch");
-            exit;
-        }
-
         if ($this->uidTakenCheck() == false) {
             header("location: ../index.php?error=useroremailtaken");
             exit;
@@ -60,10 +54,10 @@ class SingupContr extends Signup {
     }
 
     private function invalidUid() {
-        if(!preg_match("/^[a-zA-Z0-0]*$/", $this->uid)) {
-            $result = true;
-        } else {
+        if(!preg_match('/^[a-zA-Z0-9]*$/', $this->uid)) {
             $result = false;
+        } else {
+            $result = true;
         }
         return $result;
     }

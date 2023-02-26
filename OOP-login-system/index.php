@@ -17,7 +17,7 @@
                     <input type="password" name="pwdRepeat" placeholder="Repeat password">
                     <input type="text" name="email" placeholder="E-mail">
                     <br>
-                    <button type="submit" name="submit">SIGN UP</button>
+                    <button type="submit" name="signup">SIGN UP</button>
                 </form>
             </div>
             <div>
