@@ -9,7 +9,7 @@ class Dbh {
             return $dbh;
         } catch (PDOException $e){
             print "error: " . $e->getMessage() . PHP_EOL;
-            die();
+            exit();
         }
     }
 }

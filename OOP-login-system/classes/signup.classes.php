@@ -7,24 +7,23 @@ class Signup extends Dbh{
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-        if(!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if(!$stmt->execute(array($uid, $hashedPwd, $email))) { 
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
-            exit;
+            exit();
         }
     
         $stmt = null;
     }
 
     protected function checkUser($uid, $email) {
-        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?');
-        if($stmt->execute()) {
+        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?;');
 
-        }
+        
         if(!$stmt->execute(array($uid, $email))) {
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
-            exit;
+            exit();
         }
 
         if ($stmt->rowCount() > 0) {

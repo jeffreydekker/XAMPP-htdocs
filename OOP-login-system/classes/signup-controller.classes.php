@@ -18,30 +18,30 @@ class SignupContr extends Signup {
     public function signupUser() {
         if ($this->emptyInput() == false) {
             header("location: ../index.php?error=emptyinput");
-            exit;
+            exit();
         }
-
+        
         if ($this->invalidUid() == false) {
             header("location: ../index.php?error=invalidUsername");
-            exit;
+            exit();
         }
 
         if ($this->invalidEmail() == false) {
             header("location: ../index.php?error=invalidEmail");
-            exit;
+            exit();
         }
-
+        
         if ($this->pwdMatch() == false) {
             header("location: ../index.php?error=passwordsdontmatch");
-            exit;
+            exit();
         }
-
+        
         if ($this->uidTakenCheck() == false) {
             header("location: ../index.php?error=useroremailtaken");
-            exit;
+            exit();
         }
 
-        $this->setUser($this->uid, $this->pwd, $this->email);
+        // $this->setUser($this->uid, $this->pwd, $this->email);
     }
 
     private function emptyInput() {
@@ -81,7 +81,8 @@ class SignupContr extends Signup {
     }
 
     private function uidTakenCheck() {
-        if(!$this->checkUser($this->uid, $this->email)) {
+        
+        if($this->checkUser($this->uid, $this->email) == false) {
             $result = false;
         } else {
             $result = true;
